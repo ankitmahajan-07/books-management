@@ -5,7 +5,7 @@ from app.db.base import Base
 
 class Book(Base):
     __tablename__ = "books"
-    id = sa.Column(sa.String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    id = sa.Column(UUID(as_uuid=True).with_variant(sa.String(36), "sqlite"), primary_key=True, default=lambda: str(uuid.uuid4()))
     title = sa.Column(sa.String(), nullable=False, index=True)
     author = sa.Column(sa.String(), nullable=True)
     genre = sa.Column(sa.String(), nullable=True, index=True)

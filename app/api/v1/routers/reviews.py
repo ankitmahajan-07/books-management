@@ -39,8 +39,8 @@ async def get_reviews(book_id: UUID, db: AsyncSession = Depends(get_db)):
     return await list_reviews_for_book(db, book_id)
 
 
-@router.get("/{book_id}/summary", response_model=dict)
-async def book_summary(book_id: UUID, db: AsyncSession = Depends(get_db)):
+@router.get("/{book_id}/rating", response_model=dict)
+async def book_rating(book_id: UUID, db: AsyncSession = Depends(get_db)):
     """
     Return average rating for book.
     """

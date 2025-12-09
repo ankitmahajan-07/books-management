@@ -34,6 +34,7 @@ def upgrade():
         sa.Column('genre', sa.String(), nullable=True),
         sa.Column('year_published', sa.Integer(), nullable=True),
         sa.Column('summary', sa.Text(), nullable=True),
+        sa.Column('content', sa.Text(), nullable=True),
         sa.Column('created_at', sa.DateTime(timezone=True), server_default=sa.func.now()),
     )
 
