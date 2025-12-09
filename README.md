@@ -18,8 +18,8 @@ A FastAPI application for managing books, reviews, and recommendations with AI-p
 # ----------------------------------------
 # 1. Clone the repository
 # ----------------------------------------
-git clone <your-repo-url>
-cd <repo-directory>
+git clone https://github.com/ankitmahajan-07/books-management
+cd books-management
 
 # ----------------------------------------
 # 2. Create virtual environment & activate
